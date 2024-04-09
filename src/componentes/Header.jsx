@@ -1,11 +1,14 @@
 
 const Header = () => {
     return <div>
+      
         <img
           src="imagenes/letter-c-trolley.jpg"
           class="logo"
           alt="Logo de la compañia"
         />
+      
+     
         <nav>
           <ul>
             <li><a href="">Home</a></li>
