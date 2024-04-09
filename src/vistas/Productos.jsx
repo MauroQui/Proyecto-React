@@ -1,12 +1,15 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import  carritoSlice  from "../slices/carrito"
+
+const { agregarProducto } = carritoSlice.actions;
 
 const Productos = () => {
 
-    const dispatch = useDispatch() {
+    const dispatch = useDispatch(); 
 
-    }
+    const productosEnStore = useSelector(state => state.carrito.productos)
 
     const [productos, setProductos] = useState([]);
 
@@ -17,6 +20,10 @@ const Productos = () => {
             setProductos(data);
         }); 
     }, []);
+
+    useEffect (() => {
+        console.log("productosEnStore", productosEnStore);
+    }, [productosEnStore]);
 
     return ( 
     <div style={{ display:"flex", flexDirection:"column"}}> 
@@ -29,7 +36,7 @@ const Productos = () => {
                         <p>{producto.description}</p>
                         <img src={producto.image} alt={producto.title} />
                         <br />
-                        <button onClick={(evento) => console.log("Click") }>Agregar al carrito</button>
+                        <button onClick={(evento) => dispatch(agregarProducto(producto)) }>Agregar al carrito</button>
                     </li>
                 );
             })}
