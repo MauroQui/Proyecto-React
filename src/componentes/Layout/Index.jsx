@@ -2,13 +2,13 @@ import "./styles.css"
 
 const Layout = (props) => {
     return <div className="layout-container">
-      <div>
+      
         <img
           src="./componentes/img/Screenshot_26.png"
           class="logo"
           alt="Logo de la compañia"
         />
-      </div>
+      
       <h1>Hey! peeeee</h1>  
         <nav>
           <ul>

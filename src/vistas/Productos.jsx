@@ -23,6 +23,8 @@ const Productos = () => {
                         <h2>{producto.title}</h2>
                         <p>{producto.description}</p>
                         <img src={producto.image} alt={producto.title} />
+                        <br />
+                        <button>Agregar al carrito</button>
                     </li>
                 );
             })}

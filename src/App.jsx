@@ -1,15 +1,17 @@
 import './App.css';
 import Layout from './componentes/Layout/Index';
 import Productos from './vistas/Productos';
-
+import {Provider} from 'react-redux';
+import store from './store';
 
 function App() {
   return (
     <>
-      <Layout>
-        <Productos/>
-      </Layout>  
-         
+    <Provider store={store}>
+        <Layout>
+          <Productos/>
+        </Layout>  
+      </Provider>     
     </>
   );
 }
