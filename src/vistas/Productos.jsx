@@ -1,7 +1,12 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 
 const Productos = () => {
+
+    const dispatch = useDispatch() {
+
+    }
 
     const [productos, setProductos] = useState([]);
 
@@ -24,7 +29,7 @@ const Productos = () => {
                         <p>{producto.description}</p>
                         <img src={producto.image} alt={producto.title} />
                         <br />
-                        <button>Agregar al carrito</button>
+                        <button onClick={(evento) => console.log("Click") }>Agregar al carrito</button>
                     </li>
                 );
             })}
