@@ -1,7 +1,9 @@
-.layout-container {
+header {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0px;
+    background: linear-gradient(90deg, rgb(221, 233, 53),rgb(241, 160, 9));
     
 }
 
@@ -12,4 +14,21 @@ img {
 
 li {
     list-style: none;
+    display: inline-block;
+    padding: 0px 20px;
+    
 }
+
+.layout-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.elogo {
+    width: 350px;
+    height: auto;
+     
+}
+
