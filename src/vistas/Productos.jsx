@@ -26,8 +26,9 @@ const Productos = () => {
     }, [productosEnStore]);
 
     return ( 
-    <div style={{ display:"flex", flexDirection:"column"}}> 
+    <div className="products" style={{ display:"flex", flexDirection:"column"}}> 
         <h1>Productos</h1>
+        <div className="product">
         <ul>
             {productos.map((producto, posicion) => {
                 return(
@@ -35,13 +36,14 @@ const Productos = () => {
                         <h2>{producto.title}</h2>
                         <p>{producto.description}</p>
                         <img src={producto.image} alt={producto.title} />
-                        <p>Precio $</p>
-                        <h4>{producto.price}</h4>
+                        <h4>Precio $ {producto.price}</h4>
                         <button onClick={(evento) => dispatch(agregarProducto(producto)) }>Agregar al carrito</button>
+
                     </li>
                 );
             })}
         </ul>
+        </div>
     </div>
   );
 };

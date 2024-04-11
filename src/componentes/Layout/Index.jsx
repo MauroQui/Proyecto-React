@@ -13,26 +13,24 @@ const Layout = (props) => {
         <div>
           <nav className="nav">
             <ul>
-              <li>
-                <a href="">Home</a>
-              </li>
-              <li>
-                <a href="">Productos</a>
-              </li>
-              <li>
-                <a href="">Carrito de Compras</a>
-              </li>
+              <li><a href="">Home</a></li>
+              <li><a href="">Productos</a></li>
+              <li><a href="">Carrito de Compras</a></li>
             </ul>
           </nav>
-          <a href="" class="btn">
-            Login
-          </a>
         </div>
-      </header>
-  
+        <div class="count-products">
+            <span id="contador-productos">0</span>
+        </div>
+        
 
+      </header>
       
       <div>{props.children}</div>
+      <footer>
+      <p>Copyright&copy;2024 | Elaborado por <a href=""><span>PMQG Solutions</span></a>
+      </p>
+    </footer>
     </div>
   );
 };

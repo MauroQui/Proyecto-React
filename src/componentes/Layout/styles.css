@@ -3,7 +3,7 @@ header {
     justify-content: space-around;
     align-items: center;
     padding: 10px 0px;
-    background: linear-gradient(90deg, rgb(221, 233, 53),rgb(241, 160, 9));
+    background: linear-gradient(90deg, rgb(0, 0, 0),rgb(160, 15, 15));
     
 }
 
@@ -19,8 +19,19 @@ li {
     
 }
 
+footer {
+    padding: 20px;
+    background-color: rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
+    text-align: center;
+  }
+
+  span {
+    color: rgb(192, 10, 10);
+  }
+
 .layout-container {
-    display: flex;
+    display: flex;                      
     flex-direction: column;
     justify-content: space-between;
     
@@ -32,3 +43,29 @@ li {
      
 }
 
+
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    
+  }
+
+.product {
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgb(0, 0, 0, 1);
+    width: 1050px;
+    
+  }
+
+ .count-products span{
+    color: white;
+ }
